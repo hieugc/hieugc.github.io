@@ -1,0 +1,2 @@
+export default `body{font-family:Arial,sans-serif;margin:0;padding:0;background:#0d1b2a;color:#fff}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1em}.card{background:#1b263b;padding:1.5em;border-radius:10px;text-align:center}
+`;
