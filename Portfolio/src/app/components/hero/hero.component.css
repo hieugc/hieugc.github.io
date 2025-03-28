@@ -1,0 +1,21 @@
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4em 2em;
+}
+
+
+.hero img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    color: #4fc3f7;
+}

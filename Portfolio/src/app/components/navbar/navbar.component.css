@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    justify-content: center;
+    background: #415a77;
+    padding: 1em;
+}
+nav a {
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+}
