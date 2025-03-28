@@ -3,17 +3,22 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to your branch name if different
+      - gh-pages  # Change this if your branch is different
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -22,10 +27,17 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: ng build --configuration=production --base-href="/Portfolio/"
+        run: npx ng build --configuration=production --base-href="/Portfolio/"
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: dist/portfolio
+          path: dist/portfolio  # Make sure this matches your "outputPath" in angular.json
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
