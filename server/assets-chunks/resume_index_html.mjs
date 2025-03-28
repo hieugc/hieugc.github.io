@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <meta charset="utf-8">
   <title>Portfolio</title>
-  <base href="/Portfolio/">
+  <base href="/portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>body{font-family:Arial,sans-serif;margin:0;padding:0;background:#0d1b2a;color:#fff}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1em}.card{background:#1b263b;padding:1.5em;border-radius:10px;text-align:center}

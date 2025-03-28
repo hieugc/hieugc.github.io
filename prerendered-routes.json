@@ -1,9 +1,9 @@
 {
   "routes": {
-    "/Portfolio": {},
-    "/Portfolio/contact": {},
-    "/Portfolio/projects": {},
-    "/Portfolio/resume": {},
-    "/Portfolio/skills": {}
+    "/portfolio": {},
+    "/portfolio/contact": {},
+    "/portfolio/projects": {},
+    "/portfolio/resume": {},
+    "/portfolio/skills": {}
   }
 }
